@@ -4,13 +4,11 @@ form {
     position: absolute;
     top: 15%;
     left: 10%; 
-     
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
     color: white;
 }
 
-h1 {
-    color: white;
-    position: absolute;
-    top: 15%;
-    left: 10%;
+button {
+    top: 40px;
 }
