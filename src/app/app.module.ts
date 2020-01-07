@@ -12,6 +12,7 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { PesquisarComponent } from './pesquisar/pesquisar.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,7 @@ import { PesquisarComponent } from './pesquisar/pesquisar.component';
     HomeComponent,
     TopComponent,
     CadastrarComponent,
-    PesquisarComponent
+    PesquisarComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,99 @@
+{
+  "cadastrados": [
+    {
+      "id": 1,
+      "nome": "Cesar",
+      "idade": 23,
+      "escolaridade": "ensino Médio"
+    },
+    {
+      "nome": "Bruno",
+      "idade": 18,
+      "escolaridade": "Ensino Médio Completo",
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "nome": "cesar",
+      "idade": "14",
+      "escolaridade": "Ensino Fundamental Completo",
+      "email": "c.machado50@yahoo.com.br",
+      "endereco": "rua anesio",
+      "numero": "98",
+      "complemento": "12 b",
+      "cep": "7777777",
+      "city": "são paulo",
+      "state": "são paulo",
+      "course": "Introdução à Informática",
+      "file": null,
+      "anyCourse": null,
+      "id": 4
+    },
+    {
+      "nome": "cesar",
+      "idade": "14",
+      "escolaridade": "Ensino Médio Completo",
+      "email": "cesaras2334@eu.com",
+      "endereco": "rua anesio",
+      "numero": "98",
+      "complemento": "12 b",
+      "cep": "7777777",
+      "city": "são paulo",
+      "state": "são paulo",
+      "course": "Montagem e Manutenção",
+      "file": "C:\\fakepath\\iconic_new_york_city_instagram_shot.jpg",
+      "anyCourse": null,
+      "id": 5
+    },
+    {
+      "nome": "cesar",
+      "idade": "14",
+      "escolaridade": "Ensino Médio Completo",
+      "email": "cesaras2334@eu.com",
+      "endereco": "rua anesio",
+      "numero": "307",
+      "complemento": "12 b",
+      "cep": "7777777",
+      "city": "são paulo",
+      "state": "são paulo",
+      "course": "Introdução à Informática",
+      "file": null,
+      "anyCourse": null,
+      "id": 6
+    },
+    {
+      "nome": "cesar",
+      "idade": "14",
+      "escolaridade": "Ensino Médio Cursando",
+      "email": "c.machado50@yahoo.com.br",
+      "endereco": "rua anesio",
+      "numero": "307",
+      "complemento": "12 b",
+      "cep": "7777777",
+      "city": "são paulo",
+      "state": "são paulo",
+      "course": "Introdução à Informática",
+      "file": null,
+      "anyCourse": null,
+      "id": 7
+    },
+    {
+      "nome": "cesar",
+      "idade": "14",
+      "escolaridade": "Ensino Médio Cursando",
+      "email": "cesaras2334@eu.com",
+      "endereco": "rua anesio",
+      "numero": "98",
+      "complemento": "12 b",
+      "cep": "7777777",
+      "city": "são paulo",
+      "state": "são paulo",
+      "course": "Excel Avançado",
+      "file": null,
+      "anyCourse": null,
+      "id": 8
+    }
+  ]
+}

@@ -1,134 +1,184 @@
 <app-top></app-top>
 
-<form [formGroup]="formulario" (submit)="onSubmit()">
-    <div class="form-row" >
-        <div class="form-group col-md-12">
-            <label for="inputEmail4">Nome Completo</label>
-            <input 
-                type="text" 
-                class="form-control" 
-                id="InputName"
-                formControlName="nome"
-                ><small *ngIf="formulario.get('nome').valid &&
-            formulario.get('nome').touched" class="form-text text-success">Ok</small>
-          <small *ngIf="!formulario.get('nome').valid &&
-            formulario.get('nome').touched" class="form-text text-danger">nome
-            Invalido</small>
-        </div>
+<form [formGroup]="formulario" novalidate (submit)="onSubmit()">
+  <div class="form-row">
+    <div class="form-group col-md-12">
+      <label for="inputEmail4">Nome Completo</label>
+      <input
+        type="text"
+        class="form-control"
+        id="InputName"
+        formControlName="nome"
+      /><small
+        *ngIf="formulario.get('nome').valid && formulario.get('nome').touched"
+        class="form-text text-success"
+        >Ok</small
+      >
+      <small
+        *ngIf="!formulario.get('nome').valid && formulario.get('nome').touched"
+        class="form-text text-danger"
+        >nome Invalido</small
+      >
     </div>
-    <div class="form-row">
-        <div class="form-group col-md-6">
-            <label for="inputCity">Idade</label>
-            <input 
-                type="text" 
-                class="form-control" 
-                id="inputAge"
-                formControlName="idade">
-        </div>
-        <div class="form-group col-md-6">
-            <label for="inputCity">Escolaridade</label>
-            <select class="form-control" formControlName="escolaridade">
-                <option>--</option>
-                <option>Ensino Fundamental Completo</option>
-                <option>Ensino Fundamental Cursando</option>
-                <option>Ensino Médio Cursando</option>
-                <option>Ensino Médio Completo</option>
-                <option>Ensino superior Cursando</option>
-                <option>Ensino superior Completo</option>
-            </select>
-        </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputCity">Idade</label>
+      <input
+        type="text"
+        class="form-control"
+        id="inputAge"
+        formControlName="idade"
+      />
+      <small
+        *ngIf="formulario.get('idade').valid && formulario.get('idade').touched"
+        class="form-text text-success"
+        >Ok</small
+      >
+      <small
+        *ngIf="
+          !formulario.get('idade').valid && formulario.get('idade').touched"
+            class="form-text text-danger"
+        >Idade Inválida</small
+      >
     </div>
-    <div class="form-row">
-        <div class="form-group col-md-12">
-            <label for="email">E-mail</label>
-            <input 
-                type="email" 
-                class="form-control" 
-                id="email"
-                formControlName="email">
-        </div>
+    <div class="form-group col-md-6">
+      <label for="inputCity">Escolaridade</label>
+      <select class="form-control" formControlName="escolaridade">
+        <option>--</option>
+        <option>Ensino Fundamental Completo</option>
+        <option>Ensino Fundamental Cursando</option>
+        <option>Ensino Médio Cursando</option>
+        <option>Ensino Médio Completo</option>
+        <option>Ensino superior Cursando</option>
+        <option>Ensino superior Completo</option>
+      </select>
+      <small
+        *ngIf="
+          formulario.get('escolaridade').valid &&
+          formulario.get('escolaridade').touched
+        "
+        class="form-text text-success"
+        >Ok</small
+      >
+      <small
+        *ngIf="
+          !formulario.get('escolaridade').valid &&
+          formulario.get('escolaridade').touched
+        "
+        class="form-text text-danger"
+        >Escolaridade Inválida</small
+      >
     </div>
-    <div class="form-row">
-        <div class="form-group col-md-12">
-            <label for="address">Endereço</label>
-            <input 
-                type="text" 
-                class="form-control" 
-                id="address"
-                formControlName="endereco">
-        </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-12">
+      <label for="email">E-mail</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        formControlName="email"
+      />
+      <small
+        *ngIf="formulario.get('email').valid && formulario.get('email').touched"
+        class="form-text text-success"
+        >Ok</small
+      >
+      <small
+        *ngIf="
+          !formulario.get('email').valid && formulario.get('email').touched
+        "
+        class="form-text text-danger"
+        >Email Inválido</small
+      >
     </div>
-    <div class="form-row">
-        <div class="form-group col-md-4">
-            <label for="numero">Número</label>
-            <input 
-                type="text" 
-                class="form-control" 
-                id="numero" 
-                formControlName="numero">
-        </div>
-        <div class="form-group col-md-4">
-            <label for="Complemento">Complemento</label>
-            <input 
-                type="text" 
-                class="form-control" 
-                id="Complemento"
-                formControlName="complemento">
-        </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-12">
+      <label for="address">Endereço</label>
+      <input
+        type="text"
+        class="form-control"
+        id="address"
+        formControlName="endereco"
+      />
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label for="numero">Número</label>
+      <input
+        type="text"
+        class="form-control"
+        id="numero"
+        formControlName="numero"
+      />
+    </div>
+    <div class="form-group col-md-4">
+      <label for="Complemento">Complemento</label>
+      <input
+        type="text"
+        class="form-control"
+        id="Complemento"
+        formControlName="complemento"
+      />
+    </div>
 
-        <div class="form-group col-md-4">
-            <label for="zip">Cep</label>
-            <input 
-                type="text" 
-                class="form-control" 
-                id="zip"
-                formControlName="cep">
-        </div>
+    <div class="form-group col-md-4">
+      <label for="zip">Cep</label>
+      <input type="text" class="form-control" id="zip" formControlName="cep" />
     </div>
-    <div class="form-row">
-        <div class="form-group col-md-6">
-            <label for="city">Cidade</label>
-            <input 
-                type="text" 
-                class="form-control" 
-                id="city"
-                formControlName="city">
-        </div>
-        <div class="form-group col-md-6">
-            <label for="state">Estado</label>
-            <input 
-                type="text" 
-                class="form-control" 
-                id="state"
-                formControlName="state">
-        </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="city">Cidade</label>
+      <input
+        type="text"
+        class="form-control"
+        id="city"
+        formControlName="city"
+      />
     </div>
-    <div class="form-row">
-        <label for="course">Qual curso quer fazer</label>
-        <select class="form-control" id="course" formControlName="course">
-            <option>Selecione o curso</option>
-            <option>Introdução à Informática</option>
-            <option>Pacote Office</option>
-            <option>Excel Avançado</option>
-            <option>Montagem e Manutenção</option>
-        </select>
+    <div class="form-group col-md-6">
+      <label for="state">Estado</label>
+      <input
+        type="text"
+        class="form-control"
+        id="state"
+        formControlName="state"
+      />
     </div>
-    <br>
-    <div class="form-group">
-        <label for="exampleFormControlFile1">Selecione Uma Foto</label>
-        <input 
-            type="file" 
-            class="form-control-file"
-            id="exampleFormControlFile1"
-            formControlName="file">
-    </div>
-    <div class="form-group">
-        <label for="exampleFormControlTextarea3">Ja fez algum curso?</label>
-        <textarea class="form-control" 
-            id="exampleFormControlTextarea3"
-            rows="4"
-            formControlName="anyCourse">
-        </textarea>
-    </div>
-    <button type="submit" class="btn btn-primary">Cadastrar</button>
+  </div>
+  <div class="form-row">
+    <label for="course">Qual curso quer fazer</label>
+    <select class="form-control" id="course" formControlName="course">
+      <option>Selecione o curso</option>
+      <option>Introdução à Informática</option>
+      <option>Pacote Office</option>
+      <option>Excel Avançado</option>
+      <option>Montagem e Manutenção</option>
+    </select>
+  </div>
+  <br />
+  <div class="form-group">
+    <label for="exampleFormControlFile1">Selecione Uma Foto</label>
+    <input
+      type="file"
+      class="form-control-file"
+      id="exampleFormControlFile1"
+      formControlName="file"
+    />
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea3">Ja fez algum curso?</label>
+    <textarea
+      class="form-control"
+      id="exampleFormControlTextarea3"
+      rows="4"
+      formControlName="anyCourse"
+    >
+    </textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Cadastrar</button>
 </form>
