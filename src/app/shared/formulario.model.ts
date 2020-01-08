@@ -3,12 +3,15 @@ export interface  Formulario{
     idade: number;
     escolaridade: string;
     email: any;
-    endereco: string;
-    numero: number;
-    complemento: any;
-    cep: any;
-    city: any;
-    state: any;
+    endereco: {
+        cep: any;
+        rua: string;
+        bairro: any;
+        numero: number;
+        complemento: any;
+        city: any;
+        state: any
+    }
     course: string;
     file: any
     anyCourse: any
