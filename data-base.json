@@ -283,5 +283,19 @@
       "anyCourse": null,
       "id": 18
     }
+  ],
+  "login": [
+    {
+      "usuario": "gil",
+      "senha": 123456,
+      "token": "harzard",
+      "id": 1
+    },
+    {
+      "usuario": "cesar",
+      "senha": 12345,
+      "token": "chelsea",
+      "id": 2
+    }
   ]
 }

@@ -1,6 +1,21 @@
-<form class="box" action="index.html" method="post">
-    <h1>Login</h1>
-    <input type="text" name="" placeholder="Username">
-    <input type="password" name="" placeholder="Password">
-    <input  [routerLink]="['/home']" routerLinkActive="router-link-active"  type="button" name="" Value="Login">
+<form class="box" [formGroup]="login" (ngSubmit)="onSubmit()">
+  <h1>Login</h1>
+  <input
+    type="text"
+    name="usuario"
+    placeholder="Username"
+    formControlName="usuario"
+  />
+  <input
+    type="password"
+    name="senha"
+    placeholder="Password"
+    formControlName="senha"
+  />
+  <button
+    type="submit"
+    class="btn btn-primary"
+  >
+    Entrar
+  </button>
 </form>

@@ -2,11 +2,12 @@ http://localhost:3000/cadastrados
 
 ###
 
-POST http://localhost:3000/cadastrados HTTP/1.1
+POST http://localhost:3000/login HTTP/1.1
 content-type: application/json
 
 {
-    "nome": "Bruno",
-    "idade": 18,
-    "escolaridade": "Ensino Médio Completo"
+    "usuario": "cesar",
+    "senha": 12345,
+    "token": "chelsea"
 }
+
