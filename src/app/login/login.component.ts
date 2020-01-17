@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 import { EntrarService } from './entrar.service';
-import { Usuario } from './usuario';
+import { Usuario } from '../models/usuario';
 import { Router } from '@angular/router';
 
 @Component({
@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     console.log(this.login)
-    if(this.login.valid && this.login.value.usuario === 'cesar' ) {
+    if(this.login.valid && this.login.value.usuario === 'cesar' && this.login.value.senha === "123456"  ) {
       this.entrarService.fazerLogin().subscribe(success => console.log(this.login.value)),
       this.router.navigate(['/home'])
     }else {

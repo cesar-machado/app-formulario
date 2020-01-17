@@ -282,6 +282,25 @@
       "file": null,
       "anyCourse": null,
       "id": 18
+    },
+    {
+      "nome": "antonio",
+      "idade": "22",
+      "escolaridade": "Ensino Médio Cursando",
+      "email": "antonio@gmail.com",
+      "endereco": {
+        "cep": "111111111",
+        "rua": "Rua Anésio João da Silva, 12 b, 12 b",
+        "bairro": "piaui",
+        "numero": "307",
+        "complemento": "12 b",
+        "city": "Piaui",
+        "state": "Pi"
+      },
+      "course": "Introdução à Informática",
+      "file": null,
+      "anyCourse": null,
+      "id": 19
     }
   ],
   "login": [

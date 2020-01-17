@@ -12,6 +12,7 @@ const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'home', component: HomeComponent },
   { path: 'cadastrar', component: CadastrarComponent },
+  { path: 'cadastrados', component: PesquisarComponent },
   { path: 'cadastrados/:id', component: PesquisarComponent }
   
 ];

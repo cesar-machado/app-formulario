@@ -12,13 +12,13 @@ export class CadastroService {
 
   constructor(private http: HttpClient) { }
 
-  pesquisar() {
+  /*pesquisar() {
     return this.http.get<Formulario[]>('http://localhost:3000/cadastrados')
     .pipe(
       delay(2000),
       tap(console.log)
     );
-  }
+  }*/
   
   loadByid(id) {
     return this.http.get(`http://localhost:3000/cadastrados/${id}`)

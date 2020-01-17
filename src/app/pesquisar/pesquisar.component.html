@@ -1,3 +1,47 @@
 <app-top></app-top>
 
-<p>pesquisar works!</p>
+<form class="box">
+  <div>
+    <h1>Pesquise por:</h1>
+    <input
+      type="text"
+      name="id"
+      class="formControl"
+      [formControl]="pesquisaControlId"
+      placeholder="Número"
+    />
+    <input
+      type="text"
+      name="nome"
+      class="formControl"
+      [formControl]="pesquisaControlNome"
+      placeholder="Nome"
+    />
+    <button type="btn" class="btn btn-dark" (click)="onSearch()">
+      pesquisar
+    </button>
+  </div>
+</form>
+
+<div class="card-body">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>número</th>
+        <th>nome</th>
+        <th>idade</th>
+        <th>email</th>
+        <th>Cursos</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let result of result$ | async">
+        <td>{{ result.id }}</td>
+        <td>{{ result.nome }}</td>
+        <td>{{ result.idade }}</td>
+        <td>{{ result.email }}</td>
+        <td>{{ result.course }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

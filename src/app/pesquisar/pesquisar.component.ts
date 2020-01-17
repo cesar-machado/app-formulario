@@ -1,9 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { URL_API } from '../url.api';
 import { CadastroService } from '../Cadastro.service';
 import { Formulario } from '../shared/formulario.model';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
+import { PesquisandoService } from './pesquisando.service';
+import { CadastroInterface } from '../models/cadastro-interface';
+import { map, tap } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { FormControl, FormGroup } from '@angular/forms';
 
 
 @Component({
@@ -13,24 +18,49 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class PesquisarComponent implements OnInit {
 
+  cadastroInterface: CadastroInterface[]
+
+  pesquisar$: Observable<CadastroInterface[]>
+  
+  pesquisaControlNome: FormControl = new FormControl();
+  pesquisaControlId: FormControl = new FormControl();
+
+  readonly SEARCH_URL = ' http://localhost:3000/cadastrados'
+  result$: Observable<any>
+
   constructor(
-    private pesquisar:CadastroService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private pesquisando: PesquisandoService,
+    private http: HttpClient
     ) { }
 
-  ngOnInit() {
-    this.route.params.subscribe(
-      (params: any) => {
-        const id = params['id'];
-        console.log(id)
-        const form$ = this.pesquisar.loadByid(id)
-        form$.subscribe(form$ => {
-          console.log(form$)
-        })
-      }
-    )
     
-    //console.log(this.pesquisar.pesquisar())
+
+  ngOnInit() {
+    //this.pesquisando.getCadastrados().subscribe(data => this.cadastroInterface = data);
+    
+    //this.pesquisando.getCadastradosId(2).subscribe(data => this.cadastroInterface = data)
+     
+    this.pesquisar$ = this.pesquisando.getCadastrados();
   }
+
+  onSearch() {
+    //console.log(this.pesquisaControl.value);
+    let nome = this.pesquisaControlNome.value
+    let id = this.pesquisaControlId.value
+    let value = this.pesquisaControlId.value
+   
+    if (value && (value = value.trim()) !== ''){
+    let params = new HttpParams();
+    params = params.set('id', id)
+    //params = params.append('nome', nome)
+    
+    this.result$ = this.http.get(this.SEARCH_URL, {params})
+      .pipe(
+        tap(console.log)
+      )
+    }
+  }
+
 
 }
