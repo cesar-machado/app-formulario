@@ -1,5 +1,5 @@
-export interface Usuario {
-    usuario: String,
+export class Usuario {
+    nome: string
     senha: string
 }
 

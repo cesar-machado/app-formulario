@@ -6,14 +6,15 @@ import { HomeComponent } from './home/home.component'
 import { CadastrarComponent } from './cadastrar/cadastrar.component'
 import { PesquisarComponent } from './pesquisar/pesquisar.component'
   import { from } from 'rxjs';
+import { AuthRotasGuard } from './guards/auth-rotas.guard';
 
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
-  { path: 'home', component: HomeComponent },
-  { path: 'cadastrar', component: CadastrarComponent },
-  { path: 'cadastrados', component: PesquisarComponent },
-  { path: 'cadastrados/:id', component: PesquisarComponent }
+  { path: 'home', component: HomeComponent, canActivate: [AuthRotasGuard]},
+  { path: 'cadastrar', component: CadastrarComponent, canActivate: [AuthRotasGuard] },
+  { path: 'cadastrados', component: PesquisarComponent, canActivate: [AuthRotasGuard]  },
+  { path: 'cadastrados/:id', component: PesquisarComponent, canActivate: [AuthRotasGuard] }
   
 ];
 

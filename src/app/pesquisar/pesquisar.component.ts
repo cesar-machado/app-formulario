@@ -47,18 +47,19 @@ export class PesquisarComponent implements OnInit {
   onSearch() {
     //console.log(this.pesquisaControl.value);
     let nome = this.pesquisaControlNome.value
-    let id = this.pesquisaControlId.value
-    let value = this.pesquisaControlId.value
+    //let id = this.pesquisaControlId.value
+    let value = this.pesquisaControlNome.value
    
     if (value && (value = value.trim()) !== ''){
     let params = new HttpParams();
-    params = params.set('id', id)
-    //params = params.append('nome', nome)
+    //params = params.set('id', id)
+    params = params.set('nome', nome)
     
     this.result$ = this.http.get(this.SEARCH_URL, {params})
       .pipe(
         tap(console.log)
       )
+      this.pesquisaControlNome.reset()
     }
   }
 

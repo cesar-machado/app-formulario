@@ -301,6 +301,25 @@
       "file": null,
       "anyCourse": null,
       "id": 19
+    },
+    {
+      "nome": "Gilvanete",
+      "idade": "25",
+      "escolaridade": "Ensino superior Cursando",
+      "email": "gil@gmail.com",
+      "endereco": {
+        "cep": "05563-080",
+        "rua": "Rua Nazir Miguel",
+        "bairro": "jardim Raposo Tavares",
+        "numero": "122",
+        "complemento": null,
+        "city": "São Paulo",
+        "state": "São Paulo"
+      },
+      "course": "Montagem e Manutenção",
+      "file": null,
+      "anyCourse": "Fez Pacote office.",
+      "id": 20
     }
   ],
   "login": [

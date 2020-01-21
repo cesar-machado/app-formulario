@@ -1,20 +1,21 @@
-<form class="box" [formGroup]="login" (ngSubmit)="onSubmit()">
+<form class="box" >
   <h1>Login</h1>
   <input
     type="text"
-    name="usuario"
+    [(ngModel)]="usuario.nome"
+    name="nome"
     placeholder="Username"
-    formControlName="usuario"
   />
   <input
+    [(ngModel)]="usuario.senha"
     type="password"
     name="senha"
     placeholder="Password"
-    formControlName="senha"
   />
   <button
     type="submit"
     class="btn btn-primary"
+    (click)="fazerLogin()"
   >
     Entrar
   </button>

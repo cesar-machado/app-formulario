@@ -10,6 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { TopComponent } from './top/top.component';
 import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { PesquisarComponent } from './pesquisar/pesquisar.component';
+import { EntrarService } from './login/entrar.service';
+import { AuthRotasGuard } from './guards/auth-rotas.guard';
 
 
 
@@ -29,7 +31,9 @@ import { PesquisarComponent } from './pesquisar/pesquisar.component';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    EntrarService,
+    AuthRotasGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

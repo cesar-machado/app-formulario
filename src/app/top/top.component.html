@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #7ec7fc;">
-  <a class="navbar-brand" href="#" style="color: white;"><h1>Instituto</h1></a>
+  <a class="navbar-brand" [routerLink]="['/home']" routerLinkActive="active" style="color: white;"><h1>Programa de Fomulário</h1></a>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active"[routerLink]="['/home']" routerLinkActive="active" [routerLink]="['/cadastrar']" [routerLinkActiveOptions]="{ exact: true}">Home </a>
+      <!--<a class="nav-item nav-link active" [routerLink]="['/home']" routerLinkActive="disable" >Home </a>>-->
       <a class="nav-item nav-link" [routerLink]="['/cadastrar']" routerLinkActive="active">Cadastrar</a>
       <a class="nav-item nav-link" [routerLink]="['/cadastrados']" routerLinkActive="active">Pesquisar</a>
     </div>
