@@ -28,10 +28,13 @@ export class EntrarService {
       this.router.navigate(['/home'])
     }else {
       this.usuarioAutenticado = false
+      alert("Usuário ou senha inválida")
     }
   } 
   
   usuarioEstaAutenticado() {
     return this.usuarioAutenticado
   }
+
+  
 }
