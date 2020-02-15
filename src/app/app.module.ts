@@ -12,6 +12,7 @@ import { CadastrarComponent } from './cadastrar/cadastrar.component';
 import { PesquisarComponent } from './pesquisar/pesquisar.component';
 import { EntrarService } from './login/entrar.service';
 import { AuthRotasGuard } from './guards/auth-rotas.guard';
+import { CadastroService } from './cadastro.service';
 
 
 
@@ -33,7 +34,9 @@ import { AuthRotasGuard } from './guards/auth-rotas.guard';
   ],
   providers: [
     EntrarService,
-    AuthRotasGuard],
+    AuthRotasGuard,
+    CadastroService  
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { URL_API } from '../url.api';
-import { CadastroService } from '../Cadastro.service';
 import { Formulario } from '../shared/formulario.model';
 import { ActivatedRoute, Params } from '@angular/router';
 import { PesquisandoService } from './pesquisando.service';

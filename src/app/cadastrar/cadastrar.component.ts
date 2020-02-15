@@ -3,7 +3,7 @@ import { FormGroup, FormControl, Validators, FormBuilder  } from '@angular/forms
 import { from } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { URL_API } from '../url.api';
-import { CadastroService } from '../Cadastro.service';
+import { CadastroService } from '../cadastro.service';
 import { Formulario } from '../shared/formulario.model';
 import { CepService } from '../cep.service';
 
